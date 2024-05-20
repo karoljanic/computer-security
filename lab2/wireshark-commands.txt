@@ -1,0 +1,10 @@
+Filtrowanie danych w Wireshark:
+-> typ protokolu: HTTP, HTTPS, FTP
+-> adres IP, MAC, port
+-> wystepowanie fragmentow tekstowych w danych
+-> czas trwania zapytania
+
+Rodzaje przesylanych danych:
+-> za pomoca HTTP/HTTPS przesylane sa zapytania/odpowiedzi dotczace stron internetowych, pliki html, css, js 
+-> gdy uzywamy HTTPS to dane sa szyfrowane 
+-> za pomoca SFTP przesylamy w sposob szyfrowany pliki 

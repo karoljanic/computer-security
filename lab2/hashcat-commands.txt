@@ -1,0 +1,18 @@
+md5sum < password.txt | awk '{print $1}' > password_md5.txt
+sha256sum < password.txt | awk '{print $1}' > password_sha256.txt
+
+hashcat password_md5.txt ?d?d?d?d?d?d?d?d?d?d?d?d?d?d?d?d?d?d?d?d --increment --hash-type 0 --attack-mode 3 -o password_md5_hashcat.txt
+hashcat password_md5.txt -1 ?l?d ?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1 --increment --hash-type 0 --attack-mode 3 -o password_md5_hashcat.txt
+hashcat password_md5.txt most_common_passwords.txt -1 ?d?s ?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1?1 --increment --hash-type 0 --attack-mode 6 -o password_md5_hashcat.txt
+
+hashcat password_sha256.txt ?d?d?d?d?d?d?d?d?d?d?d?d?d?d?d?d?d?d?d?d --increment --hash-type 1400 --attack-mode 3 -o password_sha256_hashcat.txt
+
+Czasy:
+-> 10 cyfr MD5 ~ 1 minuta
+-> 10 znakow alfanumerycznych MD5 ~ 1 godzina
+-> 10 znakow w tym jedno slowo ze slownika MD5 ~ kilka sekund
+
+Jak sprawdzic typ funkcji hashujacej:
+hashid -m password_md5.txt
+hashid -m password_sha256.txt
+
