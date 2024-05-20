@@ -94,7 +94,7 @@ size_t countPossibleNumbers() {
         }
     }
 
-    return count;
+    return count * BankCodes.size();
 }
 
 bool verifyKey(const std::vector<uint8_t>& key) {
