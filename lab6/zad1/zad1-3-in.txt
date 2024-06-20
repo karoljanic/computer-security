@@ -1,0 +1,1 @@
+openssl ocsp -issuer GEANT_OV_RSA_CA_4.crt -cert _.pwr.edu.pl -url http://GEANT.ocsp.sectigo.com

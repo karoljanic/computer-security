@@ -1,0 +1,2 @@
+openssl verify -CAfile USERTrust_RSA_Certification_Authority.crt -untrusted GEANT_OV_RSA_CA_4.crt _.pwr.edu.pl
+openssl verify -CAfile USERTrust_RSA_Certification_Authority.crt GEANT_OV_RSA_CA_4.crt

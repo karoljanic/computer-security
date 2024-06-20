@@ -1,0 +1,2 @@
+_.pwr.edu.pl: OK
+GEANT_OV_RSA_CA_4.crt: OK
